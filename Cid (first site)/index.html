@@ -8,42 +8,50 @@
   <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/media.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=Roboto&display=swap" rel="stylesheet">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
-  <header>
+  <header class="header_first">
     <div class="container container__hader">
-      <div class="header flex">
-        <a class="header__logo" href="#">
-          <img src="img/Logologo.svg" alt="Логотип">
-        </a>
-        <div class="header__nav flex">
-          <nav class="header__nav-left flex">
-            <a class="header__link" href="#about-us">
-              О&nbsp;нас
-            </a>
-            <a class="header__link" href="#">
-              Проекты
-            </a>
-            <a class="header__link" href="#specificity">
-              Этапы
-            </a>
-            <a class="header__link" href="#">
-              Отзывы
-            </a>
-            <a class="header__link" href="#">
-              Контакты
-            </a>
-          </nav>
-          <button class="header__btn btn-reset">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black"/>
-              <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="black" stroke-width="2"/>
-            </svg>
+      <div class="header open flex">
+        <div class="header__nav-transform flex">
+          <button class="header__burger btn-reset" id="burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
           </button>
+          <a class="header__logo" href="#">
+            <img src="img/Logologo.svg" alt="Логотип">
+          </a>
+          <div class="header__nav flex">
+            <nav class="header__nav-left flex">
+              <a class="header__link" href="#about-us">
+                О&nbsp;нас
+              </a>
+              <a class="header__link" href="#">
+                Проекты
+              </a>
+              <a class="header__link" href="#specificity">
+                Этапы
+              </a>
+              <a class="header__link" href="#">
+                Отзывы
+              </a>
+              <a class="header__link" href="#">
+                Контакты
+              </a>
+            </nav>
+            <button class="header__btn btn-reset">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black"/>
+                <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="black" stroke-width="2"/>
+              </svg>
+            </button>
+        </div>
         </div>
       </div>
     </div>
@@ -241,7 +249,7 @@
             <input class="footer__form-date" type="email" name="email" placeholder="Email*" required>
             <textarea class="footer__form-date footer__textarea" name="commet" placeholder="Сообщение"></textarea>
           </div>
-          <div class="flex">
+          <div class="footer__wrepper-btn flex">
             <button class="btn footer__wrapper">
               Отправить данные
             </button>
