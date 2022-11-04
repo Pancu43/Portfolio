@@ -24,3 +24,11 @@ menuLinks.forEach(function(el) {
 
   })
 })
+
+const btnMore = document.querySelector(' .articles__more');
+const articlesItems = document.querySelectorAll(' .articles__item');
+
+btnMore.addEventListener('click', () => {
+  articlesItems.forEach(el => { el.classList.add('articles__item--visible') });
+  btnMore.closest(' .articles__center').classList.add('articles__center--hidden');
+});

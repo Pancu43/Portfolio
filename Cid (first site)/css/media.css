@@ -141,7 +141,7 @@
   }
 
   .about-us__wtf {
-    max-width: 940px;
+    /* max-width: 940px; */
   }
 
   .about-us__wtf-item {
@@ -425,13 +425,27 @@
   }
 
   .about-us__block {
+    min-height: 0;
     background-size: contain;
     border-radius: 16px;
+    display: block;
+    background-image: none;
+  }
+
+  .about-us__block::before {
+    content: "";
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/about-us_descr.jpg);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: contain;
+    background-position: center;
+    display: block;
   }
 
   .about-us__descr {
     padding: 0;
-    padding-top: 209px;
     align-items: flex-start;
     flex-direction: column;
     background: none;
@@ -443,6 +457,7 @@
     font-size: 14px;
     line-height: 28px;
     color: #000;
+    max-width: 530px;
   }
 
   .about-us__btn {
@@ -628,5 +643,29 @@
 
   .footer__social-link:not(:last-child) {
     margin-right: 17px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-us__block::before {
+    height: 340px;
+  }
+}
+
+@media (max-width: 460px) {
+  .about-us__block::before {
+    height: 310px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-us__block::before {
+    height: 265px;
+  }
+}
+
+@media (max-width: 340px) {
+  .about-us__block::before {
+    height: 209px;
   }
 }

@@ -307,6 +307,22 @@
     font-size: 14px;
   }
 
+  .articles__center {
+    display: block;
+  }
+
+  .articles__item:nth-child(-n + 2) {
+    display: none;
+  }
+
+  .articles__center--hidden {
+    display: none;
+  }
+
+  .articles__item.articles__item--visible {
+    display: block;
+  }
+
   .clients__item {
     width: 100%;
     margin-bottom: 12px;

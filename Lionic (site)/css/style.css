@@ -453,6 +453,12 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
+.articles__center {
+  padding-top: 15px;
+  text-align: center;
+  display: none;
+}
+
 /* clients */
 .clients {
   border-bottom: 1px solid #dadada
