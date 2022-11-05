@@ -56,6 +56,7 @@ body {
   line-height: 20px;
   color: #fff;
   transition: background-color 0.3s ease-in-out;
+  pointer-events: all;
 }
 
 .btn:focus {
@@ -202,6 +203,70 @@ body {
 /* main */
 
 /* carousel */
+.slider-box {
+  background-color: bisque;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-container {
+  background-color: aquamarine;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide-1 {
+  background-image: url(../img/JPGcarousel-1.jpg);
+}
+.swiper-slide-2 {
+  background-image: url(../img/JPGcarousel-2.jpg);
+}
+.swiper-slide-3 {
+  background-image: url(../img/JPGcarousel-3.png);
+}
+
+.swiper-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: bisque;
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 28px;
+  left: 10px;
+}
+
+.slide-content {
+  position: relative;
+  top: 0;
+  z-index: 2;
+  color: white;
+  pointer-events: none;
+}
+
 .carousel__main {
   padding-left: 75px;
   padding-right: 75px;
@@ -212,11 +277,11 @@ body {
   min-height: 100%;
   padding: 100px 80px;
   border-radius: 32px;
-  background-image: url(../img/JPGcarousel-1.jpg);
+  /* background-image: url(../img/JPGcarousel-1.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   flex-direction: column;
 }
 
@@ -374,13 +439,28 @@ body {
   padding-right: 75px;
   margin-bottom: 110px;
 }
+
+.tabs-nav {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 45px;
+}
+
 .specificity__step {
   flex-direction: row;
   justify-content: space-between;
-
 }
 
-.specificity__step-link {
+.tabs-nav__item:not(:last-child) {
+  margin-right: 86px;
+}
+
+.tabs-nav__item {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tabs-nav__btn {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -388,45 +468,39 @@ body {
   transition: color .3s ease-in-out, outline .3s ease-in-out;
 }
 
-.specificity__step-link:focus {
+.tabs-nav__btn:focus {
   outline-offset: 2px;
   outline: 2px solid #FF9900;
 }
 
-.specificity__step-link:hover {
+.tabs-nav__btn:hover {
   outline: none;
   color: #FF9900;
 }
 
-.specificity__step-link:active {
+.tabs-nav__btn:active {
   outline: none;
   color: #E1670E;
 }
 
-.specificity__step:not(:last-child) {
-  margin-right: 86px;
+.tabs__item {
+  display: none;
+}
+
+.tabs__item--active {
+  display: block;
 }
 
 .specificity__step-descr {
   padding-right: 87px;
   flex-direction: column;
-  /* background-image: url(../img/specificity-1.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: right; */
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .specificity__main-title {
   margin: 0;
   margin-bottom: 50px;
   color: #000000;
-}
-
-.specificity__flex {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 45px;
 }
 
 .specificity__title {
