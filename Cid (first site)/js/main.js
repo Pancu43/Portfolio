@@ -33,3 +33,4 @@ tabsBtn.forEach(function(element){
   });
 });
 
+new Accordion('.accordion');

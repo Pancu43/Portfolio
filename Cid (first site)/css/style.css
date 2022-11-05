@@ -134,7 +134,7 @@ body {
 }
 
 .header__nav-left {
-  margin-right: 244px;
+  margin-right: 260px;
 }
 
 .header__link {
@@ -273,7 +273,7 @@ body {
 }
 
 .carousel {
-  margin-bottom: 51px;
+  margin-bottom: 55px;
   min-height: 100%;
   padding: 100px 80px;
   border-radius: 32px;
@@ -382,13 +382,13 @@ body {
   background-color: #E1670E;
 }
 
-.about-us__wtf {
+.about-us__card {
   flex-basis: 50%;
   flex-direction: column;
 }
 
-.about-us__wtf-item {
-  padding: 65px 120px 65px 300px;
+.about-us__card-item {
+  padding: 65px 80px 65px 300px;
   background: #fff;
   border: 1px solid #CACACA;
   border-radius: 32px;
@@ -396,18 +396,18 @@ body {
   background-position: 65px 60px;
 }
 
-.about-us__wtf-item:not(:last-child) {
+.about-us__card-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
 .top-card {
-  background-image: url(../img/wtf-1.svg);
+  background-image: url(../img/card-1.svg);
   background-position-x: 59px;
   background-position-y: 65px;
 }
 
 .bottom-card {
-  background-image: url(../img/wtf-2.svg);
+  background-image: url(../img/card-2.svg);
   background-position-x: 59px;
   background-position-y: 65px;
 }
@@ -422,7 +422,7 @@ body {
   color: #000000;
 }
 
-.about-us__wtf-descr {
+.about-us__card-descr {
   margin: 0;
   font-weight: 400;
   font-size: 16px;
@@ -436,7 +436,7 @@ body {
   /* padding: 0 93px 0 53px; */
   padding: 0;
   padding-left: 57px;
-  padding-right: 75px;
+  padding-right: 92px;
   margin-bottom: 110px;
 }
 
@@ -492,7 +492,6 @@ body {
 }
 
 .specificity__step-descr {
-  padding-right: 87px;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -590,6 +589,10 @@ margin-right: 32px;
   padding: 0 75px;
 }
 
+.faq__section-title {
+  margin-bottom: 30px;
+}
+
 .faq-title {
   margin-bottom: 32px;
 }
@@ -602,7 +605,6 @@ margin-right: 32px;
   position: relative;
   margin-top: -1px;
   padding: 39px 0;
-  padding-right: 100px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid #CACACA;
   transition: border-color 0.3s ease-in-out;
@@ -632,12 +634,17 @@ margin-right: 32px;
   transition: color .3s ease-in-out;
 }
 
-.faq__element:focus h3 {
-  color: #FF9900;
+.faq__descr {
+  margin: 0;
+  max-width: 1003px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000;
 }
 
-.faq__element:hover h3 {
-  color: #FF9900;
+.faq__descr:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .faq__element svg ellipse,
@@ -653,14 +660,18 @@ margin-right: 32px;
   fill: #fff;
 }
 
-/* .faq__open:hover svg {
+.faq__element.is-active h3 {
+  margin-bottom: 30px;
+}
+
+.faq__element.is-active svg {
   transform: rotate(45deg);
-} */
+}
 
 /* footer */
 
 .footer {
-  padding: 50px 75px;
+  padding: 46px 75px;
   background-color: #000;
   justify-content: space-between;
 }
@@ -729,10 +740,6 @@ margin-right: 32px;
 
 .footer__social-link:not(:last-child) {
   margin-right: 25px;
-}
-
-.footer__request {
-  /* min-width: 570px; */
 }
 
 .footer__form {
@@ -837,7 +844,6 @@ margin-right: 32px;
 
 .footer__right {
   margin-left: 17px;
-  margin-right: -17px;
   max-width: 363px;
 }
 
@@ -847,4 +853,25 @@ margin-right: 32px;
   font-size: 16px;
   line-height: 32px;
   color: #CACACA;
+}
+
+
+.accordion__content {
+	overflow: hidden;
+	visibility: hidden;
+	transition-property: height, visibility;
+	transition-timing-function: ease;
+}
+
+.accordion--active .accordion__content {
+	visibility: visible;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+}
+
+.accordion__heading {
+	margin: 0;
 }
