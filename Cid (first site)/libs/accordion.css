@@ -16,6 +16,7 @@
 .ac .ac-header{
   margin:0;
   padding:0;
+  padding: 39px 0;
 }
 .ac .ac-trigger{
   /* font:bold 16px Arial,sans-serif; */
@@ -39,7 +40,7 @@
   transition: color .3s ease-in-out;
 }
 
-.ac-trigger:focus {
+.ac-trigger:focus{
   color: #FF9900;
 }
 

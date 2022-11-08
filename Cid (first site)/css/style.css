@@ -128,13 +128,38 @@ body {
   display: none;
 }
 
+.header__burger:focus {
+  outline-offset: -3px;
+  outline-color: #FF9900;
+}
+
+.header__burger:active {
+  outline: none;
+}
+
+.header__burger:active .burger__line {
+  color: #E1670E;
+}
+
+.header__burger:active .burger__line:nth-child(2) {
+  width: 25px;
+}
+
+.header__burger:active .burger__line:nth-child(3) {
+  width: 18px;
+}
+
 .header__logo {
   flex-shrink: 0;
   align-items: center;
 }
 
+.header__nav {
+  align-items: center;
+}
+
 .header__nav-left {
-  margin-right: 260px;
+  /* margin-right: 245px; */
 }
 
 .header__link {
@@ -200,6 +225,129 @@ body {
   stroke: #FF9900;
 }
 
+/* ПОМОГИТЕ ДАШЕ НАЙТИ НУЖНУЮ ФОРМУ */
+
+.search-all {
+  flex-direction: column;
+}
+
+/* БОЛЕЕ МЕНЕЕ РАБОТАЕТ */
+
+.search-3-div {
+  /* margin-bottom: 30px; */
+}
+
+.search-3-div--active {
+  padding: 0;
+  width: 100%;
+  /* margin-left: 50px; */
+  border-radius: 24px;
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 12%);
+  background: #FFFFFF;
+}
+
+.search-3 {
+  margin: 0 auto;
+  position: relative;
+  width: 267px;
+  height: 42px;
+}
+
+.search-3--active {
+  width: 300px;
+}
+
+.search-3__press-svg {
+  position: absolute;
+  top: 25%;
+  right: 1px;
+  cursor: pointer;
+  display: block;
+}
+
+.search-3__press-svg--active {
+  display: none;
+}
+
+.search-3__press-svg:focus rect {
+  fill: #FF9900;
+}
+.search-3__press-svg:focus path {
+  outline: 2px solid #FF9900;
+  outline-offset: 2px;
+}
+
+.search-3__press-svg:hover rect {
+  fill: #FF9900;
+}
+.search-3__press-svg:hover path {
+  stroke: #FF9900;
+}
+
+.search-3__input {
+  height: 42px;
+  width: 100%;
+  padding: 0 42px 0 15px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  background: transparent;
+  transition: .4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 3px;
+  right: -8px;
+  z-index: 2;
+  display: none;
+}
+
+.search-2__input--active {
+  display: block;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  /* position: absolute;
+  top: 3px;
+  right: -8px; */
+  background: url(/img/closed_search.svg);
+  background-repeat: no-repeat;
+}
+
+.search-3__input:focus {
+  width: 100%;
+  z-index: 1;
+  border-bottom: 2px solid #F9F0DA;
+}
+
+.search-3__btn {
+  border: none;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 3px;
+  right: -8px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  z-index: 10;
+  display: none;
+}
+
+.search-3__btn rect {
+  fill: #FF9900;
+}
+
+.search-3__btn path {
+  stroke: #FF9900;
+}
+
+.search-3__btn--active {
+  display: block;
+}
+
+
 /* main */
 
 /* carousel */
@@ -244,7 +392,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background-color: bisque;
+  background-color: #fff;
   width: 15px;
   height: 15px;
 }
@@ -483,6 +631,10 @@ body {
   color: #E1670E;
 }
 
+.tabs-nav__btn--active {
+  color: #E1670E
+}
+
 .tabs__item {
   display: none;
 }
@@ -593,8 +745,22 @@ margin-right: 32px;
   margin-bottom: 30px;
 }
 
-.faq-title {
-  margin-bottom: 32px;
+.faq__title {
+  margin: 0;
+  padding: 30px 0;
+  padding-right: 70px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.faq__title:focus{
+  color: #FF9900;
+}
+
+.faq__title:hover {
+  color: #FF9900;
 }
 
 .faq__list {
@@ -604,10 +770,13 @@ margin-right: 32px;
 .faq__element {
   position: relative;
   margin-top: -1px;
-  padding: 39px 0;
   border-top: 1px solid transparent;
   border-bottom: 1px solid #CACACA;
   transition: border-color 0.3s ease-in-out;
+}
+
+.faq__element:not(:last-child) {
+  border-bottom: 2px solid #CACACA;
 }
 
 .faq__element:first-child {
@@ -671,7 +840,7 @@ margin-right: 32px;
 /* footer */
 
 .footer {
-  padding: 46px 75px;
+  padding: 50px 75px;
   background-color: #000;
   justify-content: space-between;
 }
@@ -843,8 +1012,9 @@ margin-right: 32px;
 }
 
 .footer__right {
-  margin-left: 17px;
-  max-width: 363px;
+    margin-right: -17px;
+    margin-left: 17px;
+    max-width: 363px;
 }
 
 .footer__descr {
