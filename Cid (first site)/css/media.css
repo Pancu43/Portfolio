@@ -1,4 +1,8 @@
 @media (max-width: 1199px) {
+.stop-scroll {
+  overflow: hidden;
+}
+
   .header__burger {
     position: relative;
     display: block;
@@ -46,12 +50,12 @@
 
   .header__nav-left {
     margin: 0;
-    padding: 155px 106px 238px 50px;
+    padding: 138px 106px 20px 50px;
     position: absolute;
     flex-direction: column;
     left: -480px;
     top: 0;
-    background-color: blueviolet;
+    background-color: #fff;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 32px 32px;
     transition: transform .5s ease-in-out;
@@ -147,7 +151,7 @@
     /* max-width: 940px; */
   }
 
-  .about-us__wtf-item {
+  .about-us__card-item {
     padding: 65px 128px 65px 317px;
   }
 
@@ -290,12 +294,13 @@
 
   .top-card,
   .bottom-card {
+    padding: 35px 48px 35px 170px;
     background-position-x: 39px;
     background-position-y: 67px;
     background-size: 114px 99px;
   }
 
-  .about-us__wtf-item {
+  .about-us__card-item {
     padding: 35px 45px 35px 170px;
   }
 
@@ -333,7 +338,7 @@
 }
 
 .faq__element {
-  padding-right: 50px;
+  /* padding-right: 50px; */
 }
 
 .footer {
@@ -367,13 +372,30 @@
   }
 
   .header__nav-left {
-    padding: 78px 97px 101px 15px;
-    left: -381px;
+    padding: 65px 97px 20px 15px;
+    display: none;
+    left: 0;
+    width: 100%;
     height: 100vh;
   }
 
+  .header_first.open .header__nav-left {
+    transform: translateX(0%);
+    display: block;
+  }
+
   .header__link:not(:last-child) {
-    margin-bottom: 0;
+    margin-bottom: 2px;
+  }
+
+  .search-form {
+    padding: 15px 15px;
+    border-radius: 0 0 24px 24px;
+    z-index: 22;
+  }
+
+  .search-form__imput {
+    width: 222px;
   }
 
   .btn {
@@ -397,6 +419,7 @@
     margin-bottom: 59px;
     text-align: center;
     align-items: center;
+    border-radius: 18px;
 }
 
   .carousel__main {
@@ -414,6 +437,16 @@
     font-size: 12px;
     line-height: 15px;
     text-align: center;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 12px;
+    left: 0px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
   }
 
   .section-title {
@@ -478,7 +511,11 @@
     padding: 10px 41px;
   }
 
-  .about-us__wtf-item {
+  .about-us__btn:focus {
+    color: #fff ;
+  }
+
+  .about-us__card-item {
     padding: 0;
     padding-top: 60px;
     background-position-x: 0;
@@ -487,8 +524,13 @@
     border: none;
   }
 
-  .about-us__wtf-item:not(:last-child) {
+  .about-us__card-item:not(:last-child) {
     margin-bottom: 32px;
+  }
+
+  .about-us__card-descr {
+    font-size: 14px;
+    line-height: 28px;
   }
 
   .top-card {
@@ -521,6 +563,21 @@
     margin-bottom: 20px;
   }
 
+  .tabs-nav {
+    margin-left: -5px;
+    margin-bottom: 15px;
+  }
+
+  .tabs-nav__item:not(:last-child) {
+  margin-right: 39px;
+  }
+
+  .tabs-nav__btn {
+    font-size: 14px;
+    line-height: 17px;
+    width: 45px;
+  }
+
   .specificity__step,
   .specificity__step:not(:last-child) {
     margin-right: 0;
@@ -536,6 +593,7 @@
   }
 
   .specificity__step-img-correct {
+    border-radius: 16px;
     margin-bottom: 18px;
   }
 
@@ -565,32 +623,32 @@
   }
   .faq {
     padding: 0 15px;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
   }
 
-  .faq-title {
-    margin-bottom: 18px;
-}
-
-  .faq_question {
+  .faq__title {
+    padding-right: 49px;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-  }
+}
 
-  .faq__element:nth-child(2n) {
-    padding: 30px 31px 30px 0;
-    padding-right: 50px;
+.faq__section-title {
+  margin-bottom: 18px;
 }
 
   .faq__element {
-    padding: 30px 31px 30px 0;
-    padding-right: 50px;
+    padding: 0;
   }
 
   .faq__element svg {
     width: 30px;
-    height: 30px;
+    /* height: 0; */
+    align-items: center;
+    position: absolute;
+    right: 0;
+    /* top: 60%; */
+    /* /* margin-top: -25px; */
   }
 
   .footer {
@@ -680,5 +738,6 @@
 @media (max-width: 340px) {
   .about-us__block::before {
     height: 209px;
+    border-radius: 18px;
   }
 }

@@ -3,8 +3,14 @@
 document.addEventListener ('DOMContentLoaded', function() {
   document.getElementById('burger').addEventListener('click', function() {
     document.querySelector('header').classList.toggle('open')
+  });
+
+  document.querySelectorAll('.header__link').forEach(function(el) {
+  el.addEventListener('click', function() {
+    document.querySelector('header').classList.remove('open')
   })
-})
+  });
+});
 
 // Swiper
 
@@ -45,18 +51,17 @@ new Accordion('.accordion');
 
 // кнопка поиска
 
-const searchPressSvg = document.querySelector( '.search-3__press-svg' );
-const searchInput = document.querySelector( '.search-3__input' );
-const searchBtn = document.querySelector( '.search-3__btn' );
-const search = document.querySelector( '.search-3' );
-const searchDiv = document.querySelector( '.search-3-div' );
+document.addEventListener( 'DOMContentLoaded', (e) => {
+  document.getElementById('open-search-form').addEventListener('click', (e) => {
+    document.getElementById('search-form').classList.add('search-form_show')
+  });
 
-searchPressSvg.addEventListener( 'click', function(el) {
-  el.stopPropagation();
-  this.classList.add( 'search-3__press-svg--active' );
-  searchInput.classList.add( 'search-2__input--active' );
-  searchBtn.classList.add( 'search-3__btn--active' );
-  search.classList.add( 'search-3--active' );
-  searchDiv.classList.add( 'search-3-div--active' );
+  document.getElementById('search-form-close').addEventListener('click', (e) => {
+    document.getElementById('search-form').classList.remove('search-form_show')
+  });
+
+  document.getElementById('search-form').addEventListener('submit', (e) => {
+    e.preventDefault()
+  });
 
 } );

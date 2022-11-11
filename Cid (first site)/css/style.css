@@ -105,6 +105,7 @@ body {
 
 /* header */
 .container__hader {
+  position: relative;
   background: #fff;
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
   border-radius: 0px 0px 32px 32px;
@@ -141,14 +142,6 @@ body {
   color: #E1670E;
 }
 
-.header__burger:active .burger__line:nth-child(2) {
-  width: 25px;
-}
-
-.header__burger:active .burger__line:nth-child(3) {
-  width: 18px;
-}
-
 .header__logo {
   flex-shrink: 0;
   align-items: center;
@@ -159,7 +152,7 @@ body {
 }
 
 .header__nav-left {
-  /* margin-right: 245px; */
+  margin-right: 245px;
 }
 
 .header__link {
@@ -225,26 +218,84 @@ body {
   stroke: #FF9900;
 }
 
-/* ПОМОГИТЕ ДАШЕ НАЙТИ НУЖНУЮ ФОРМУ */
+/* ФОРМА ПОИСКА */
 
-.search-all {
-  flex-direction: column;
-}
 
-/* БОЛЕЕ МЕНЕЕ РАБОТАЕТ */
-
-.search-3-div {
-  /* margin-bottom: 30px; */
-}
-
-.search-3-div--active {
-  padding: 0;
-  width: 100%;
-  /* margin-left: 50px; */
+.search-form {
+  display: none;
+  padding: 16px 32px;
+  align-items: center;
   border-radius: 24px;
   box-shadow: 0px 0px 20px rgb(0 0 0 / 12%);
   background: #FFFFFF;
+  position: absolute;
+  right: 0;
 }
+
+.search-form_show {
+  display: flex;
+}
+
+.search-form__imput {
+  padding: 8px 14px;
+  width: 412px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px #CACACA solid;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #CACACA;
+}
+
+.search-form__imput::placeholder {
+  color: #CACACA;
+
+}
+
+.search-form__imput:focus {
+  outline: none;
+}
+
+.search-form__send {
+  margin-right: 20px;
+}
+
+.search-form__send:focus {
+  outline-offset: 1px;
+  outline: 2px solid #FF9900;
+}
+
+.search-form__close:focus {
+  outline-offset: 1px;
+  outline: 2px solid #FF9900;
+}
+
+.search-form__close:hover {
+  outline: none;
+}
+
+.search-form__close:hover rect {
+  fill: #FF9900;
+}
+
+.search-form__close:hover circle {
+  stroke: #FF9900;
+}
+
+.search-form__close:active {
+  outline: none;
+}
+
+.search-form__close:active rect {
+  fill: #000;
+}
+
+.search-form__close:active circle {
+  stroke: #000;
+}
+
+/* OLD */
 
 .search-3 {
   margin: 0 auto;
@@ -395,6 +446,13 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: #fff;
   width: 15px;
   height: 15px;
+  outline: none;
+}
+
+.swiper-pagination-bullet:focus {
+  outline: solid;
+  outline-color: #FF9900;
+  outline-offset: 1px;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -406,6 +464,7 @@ input[type="search"]::-webkit-search-cancel-button {
   bottom: 28px;
   left: 10px;
 }
+
 
 .slide-content {
   position: relative;
@@ -954,6 +1013,7 @@ margin-right: 32px;
 .footer__textarea {
   margin-bottom: 32px;
   min-height: 150px;
+  resize: none;
 }
 
 .footer__wrapper {
@@ -991,6 +1051,7 @@ margin-right: 32px;
   height: 14px;
   border: 1px solid #CACACA;
   border-radius: 2px;
+
 }
 
 .footer__form-chek span::after {
@@ -1009,6 +1070,10 @@ margin-right: 32px;
 
 .footer__form-chek input:checked + span::after {
   display: block;
+}
+
+.footer__form-chek input:focus + span::before {
+  border: #FF9900 2px solid;
 }
 
 .footer__right {
