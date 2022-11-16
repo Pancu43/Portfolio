@@ -1,0 +1,230 @@
+html {
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  background-color: #EDF2F8;
+}
+
+img {
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container-card-2 {
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.card-2 {
+  margin: 50px auto;
+  max-width: 732px;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.card-2__left {
+  width: 285px;
+  background-image: url(/img/drawers.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px 0 0 15px;
+}
+
+.card-2__rigth {
+  padding: 32px 39px;
+  max-width: 364px;
+  flex-direction: column;
+}
+
+.card-2__title {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.card-2__descr {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.card-2__social {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-2__author {
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  align-items: center;
+}
+
+.card-2__author-avatar {
+  margin-right: 15px;
+}
+
+.card-2__author-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+.card-2__author-name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 13px;
+  color: #000;
+}
+
+.card-2__author-date {
+  margin: 0;
+  font-weight: 500;
+  font-size: 13px;
+  color: #BBBEC5;
+}
+
+.card-2__share--active {
+  
+}
+
+.card-2__share svg, circle {
+  fill: #F6F7FC;
+}
+
+.card-2__share svg, path {
+  fill: #6E8098;
+}
+
+.card-2__share:focus {
+  outline-offset: 2px;
+  outline: 2px black solid;
+  border-radius: 2px;
+}
+
+.card-2__share:hover {
+  outline: none;
+}
+
+.card-2__share:active {
+  outline: none;
+}
+
+.card-2__share:hover circle {
+  fill: #6f99d1;
+}
+
+.card-2__share:hover path {
+  fill: #F6F7FC;
+}
+
+.card-2__share:active circle {
+  fill: #6E8098;
+}
+
+.card-2__share:active path {
+  fill: #F6F7FC;
+}
+
+.card-2__btn {
+  position: relative;
+} 
+
+.card-2__share-social {
+  padding: 13px 37px;
+  width: 176px;
+  height: 28px;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: -78px;
+  right: -110px;
+  background: #49556B;
+  border-radius: 13px;
+  display: none;
+}
+
+.card-2__share-social--active {
+  display: flex;
+}
+
+.diamond {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: -12px;
+  left: 112px;
+  rotate: 45deg;
+  background: #49556B;
+  z-index: 1;
+}
+
+.card-2__share-descr {
+  margin: 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  letter-spacing: 0.38em;
+  color: #BFBFBF;
+}
+
+.social-link {
+  z-index: 5;
+}
+
+.social-link path {
+  fill: #BFBFBF;
+}
+
+.social-link:focus {
+  outline: none;
+}
+
+.social-link:focus path {
+  fill: #ffd19c;
+}
+
+.social-link:hover path {
+  fill: #ffad50;
+}
+
+.social-link:active path {
+  fill: #ff8800;
+}
+
+/* .card-2__share:focus svg {
+  fill: red
+} */
+
+
+/* .card-2__share {
+  display: block;
+  width: 250px;
+  height: 55px;
+  background-color: #49556B;
+}  */
