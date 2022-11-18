@@ -1,0 +1,10 @@
+@media (max-width: 1360px) {
+  /* .dashboard__big-cards:nth-child(2 n) {
+    flex-wrap: wrap;
+  } */
+};
+
+/* mobile */
+@media (max-width: 1199px) {
+
+}
