@@ -888,10 +888,6 @@ margin-right: 32px;
   fill: #fff;
 }
 
-.faq__element.is-active h3 {
-  margin-bottom: 30px;
-}
-
 .faq__element.is-active svg {
   transform: rotate(45deg);
 }
