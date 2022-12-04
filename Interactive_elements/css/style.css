@@ -1,0 +1,143 @@
+html {
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  padding: 100px 0;
+  margin: 0 auto;
+  max-width: 1440px;
+  align-items: center;
+}
+
+/* чекбокс */
+
+/* .checkbox {
+  padding: 20px 30px 30px 30px;
+  width: 176px;
+  height: 309px;
+  flex-direction: column;
+  background-color: aquamarine;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.checkbox h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333333;
+}
+
+.checkbox__items {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkbox__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.checkbox__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.checkbox__items {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+#check {
+  opacity: 0;
+}
+
+#check + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+}
+
+#check + span:before {
+  content: '\2713';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+#check:checked + span:before {
+  opacity: 1;
+} */
+
+#check {
+  display: none;
+}
+
+#check + span {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
+#check + span:before {
+  content: '\2713';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+#check:checked + span:before {
+  opacity: 1;
+}
+
+#check:checked + span {
+  border-color: #CCB26E;
+}
+
+.checkbox__item {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
