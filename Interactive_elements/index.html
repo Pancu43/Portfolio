@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -26,28 +27,28 @@
           Динозавры
           <span></span>
         </label>
-        <label class="checkbox__item" for="check">
-          <input type="checkbox" name="check" id="check">
+        <label class="checkbox__item" for="check2">
+          <input type="checkbox" name="check" id="check2">
           Медведи
           <span></span>
         </label>
-        <label class="checkbox__item" for="check">
-          <input type="checkbox" name="check" id="check">
+        <label class="checkbox__item" for="check3">
+          <input type="checkbox" name="check" id="check3">
           Косули
           <span></span>
         </label>
-        <label class="checkbox__item" for="check">
-          <input type="checkbox" name="check" id="check">
+        <label class="checkbox__item" for="check4">
+          <input type="checkbox" name="check" id="check4">
           Лисы
           <span></span>
         </label>
-        <label class="checkbox__item" for="check">
-          <input type="checkbox" name="check" id="check">
+        <label class="checkbox__item" for="check5">
+          <input type="checkbox" name="check" id="check5">
           Волки
           <span></span>
         </label>
-        <label class="checkbox__item" for="check">
-          <input type="checkbox" name="check" id="check">
+        <label class="checkbox__item" for="check6">
+          <input type="checkbox" name="check" id="check6">
           Олени и лоси
           <span></span>
         </label>
@@ -70,13 +71,19 @@
       </p>
     </div>
     <div class="form">
-      <form action="https://jsonplaceholder.typicode.com/posts">
+      <form id="form" action="">
         <div class="form__items flex">
-        <input type="text" name="ФИО" placeholder="ФИО*" data-validate-filed="name">
-        <input type="tel" name="tel" placeholder="Телефон*" data-validate-filed="tel" data-validate-rules="phone">
-        <input type="email" name="email" placeholder="Email*" data-validate-filed="mail">
+        <div class="form__item flex">
+          <input id="name" type="text" name="Имя" placeholder="Имя*" required>
         </div>
-        <button class="form__btn btn-reset">
+        <div class="form__item flex">
+          <input id="tel" type="text" name="tel" placeholder="Телефон*" required>
+        </div>
+        <div class="form__item flex">
+          <input id="email" type="email" name="email" placeholder="Email*" required>
+        </div>
+        </div>
+        <button class="form__btn btn-reset" type="submit">
           Заказать
         </button>
       </form>
@@ -125,7 +132,7 @@
       }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
-  <!-- <script src="/inputmask.min.js"></script> -->
+  <script src="/js/inputmask.min.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="/js/main.js"></script>

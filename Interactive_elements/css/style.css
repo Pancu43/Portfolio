@@ -35,7 +35,7 @@ body {
 .container {
   padding: 100px 0;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 2700px;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -78,11 +78,16 @@ body {
   margin-bottom: 20px;
 }
 
-#check {
+#check, #check2, #check3, #check4, #check5, #check6 {
   display: none;
 }
 
-#check + span {
+#check + span,
+#check2 + span,
+#check3 + span,
+#check4 + span,
+#check5 + span,
+#check6 + span {
   position: absolute;
   top: 1px;
   left: 0;
@@ -93,7 +98,12 @@ body {
   border-radius: 3px;
 }
 
-#check + span:before {
+#check + span:before,
+#check2 + span:before,
+#check3 + span:before,
+#check4 + span:before,
+#check5 + span:before,
+#check6 + span:before {
   content: "";
   position: absolute;
   top: 3px;
@@ -106,11 +116,21 @@ body {
   background-repeat: no-repeat;
 }
 
-#check:checked + span:before {
+#check:checked + span:before,
+#check2:checked + span:before,
+#check3:checked + span:before,
+#check4:checked + span:before,
+#check5:checked + span:before,
+#check6:checked + span:before {
   opacity: 1;
 }
 
-#check:checked + span {
+#check:checked + span,
+#check2:checked + span,
+#check3:checked + span,
+#check4:checked + span,
+#check5:checked + span,
+#check6:checked + span {
   border-color: #CCB26E;
 }
 
@@ -222,7 +242,7 @@ body {
 
 .simplebar-scrollbar:before {
   width: 6px;
-  height: 70px;
+  height: 100%;
   background: #CCB26E;
   border-radius: 5px;
 }
@@ -236,7 +256,7 @@ body {
 .form {
   padding: 38px 30px;
   width: 440px;
-  height: 410px;
+  min-height: 410px;
   background-color: hsla(0, 0%, 0%, 0.4);
   border-radius: 10px;
   font-family: 'Roboto', 'Open Sans', sans-serif;
@@ -260,6 +280,23 @@ body {
   color: #999
 }
 
+.form__items input:focus {
+  outline: 1px solid #FF5C00;
+  outline-offset: 3px;
+}
+
+.form__items input:hover {
+  background-color: #ffe3d4;
+  border-color: #ff0000;
+}
+
+.form__items input:active {
+  background-color: #ff8b4e;
+  color: white;
+  outline: none;
+  border-color: white;
+}
+
 .form__btn  {
   padding: 18.5px 53px;
   font-weight: 400;
@@ -268,6 +305,33 @@ body {
   color: #fff;
   background: #FF5C00;
   border-radius: 10px;
+}
+
+.form__btn:focus {
+  outline-offset: 2px;
+  outline: 2px solid #FF5C00;
+}
+
+.form__btn:hover {
+  background: #ff8845;
+}
+
+.form__btn:active {
+  background: #cf4b00;
+  outline: none;
+}
+
+.form__item {
+  flex-direction: column-reverse;
+}
+
+.just-validate-error-label {
+  padding-left: 20px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FF5C00 !important;
 }
 
 /* тултип */
@@ -288,7 +352,9 @@ body {
 }
 
 .tippy-box {
-  padding: 7px 15px;
+  padding: 7px auto;
+  width: 163px;
+  height: 100%;
   border-radius: 0;
   background-color: #666;
   color: #fff;
